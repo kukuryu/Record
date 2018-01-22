@@ -1,0 +1,11 @@
+C:\Users\kukur\OneDrive\문서\Visual Studio 2017\Projects\Record\Record\bin\Debug\netcoreapp2.0\Record.deps.json
+C:\Users\kukur\OneDrive\문서\Visual Studio 2017\Projects\Record\Record\bin\Debug\netcoreapp2.0\Record.runtimeconfig.json
+C:\Users\kukur\OneDrive\문서\Visual Studio 2017\Projects\Record\Record\bin\Debug\netcoreapp2.0\Record.runtimeconfig.dev.json
+C:\Users\kukur\OneDrive\문서\Visual Studio 2017\Projects\Record\Record\bin\Debug\netcoreapp2.0\Record.dll
+C:\Users\kukur\OneDrive\문서\Visual Studio 2017\Projects\Record\Record\bin\Debug\netcoreapp2.0\Record.pdb
+C:\Users\kukur\OneDrive\문서\Visual Studio 2017\Projects\Record\Record\obj\Debug\netcoreapp2.0\Record.csprojResolveAssemblyReference.cache
+C:\Users\kukur\OneDrive\문서\Visual Studio 2017\Projects\Record\Record\obj\Debug\netcoreapp2.0\Record.csproj.CoreCompileInputs.cache
+C:\Users\kukur\OneDrive\문서\Visual Studio 2017\Projects\Record\Record\obj\Debug\netcoreapp2.0\Record.AssemblyInfoInputs.cache
+C:\Users\kukur\OneDrive\문서\Visual Studio 2017\Projects\Record\Record\obj\Debug\netcoreapp2.0\Record.AssemblyInfo.cs
+C:\Users\kukur\OneDrive\문서\Visual Studio 2017\Projects\Record\Record\obj\Debug\netcoreapp2.0\Record.dll
+C:\Users\kukur\OneDrive\문서\Visual Studio 2017\Projects\Record\Record\obj\Debug\netcoreapp2.0\Record.pdb
