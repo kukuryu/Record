@@ -12543,11 +12543,11 @@
       "hideWarningsAndErrors": true
     },
     "restore": {
-      "projectUniqueName": "C:\\Users\\kukur\\OneDrive\\문서\\GitHub\\Record\\Record\\Record\\Record.csproj",
+      "projectUniqueName": "C:\\Users\\kukur\\OneDrive\\문서\\GitHub\\Record\\Record\\Record.csproj",
       "projectName": "Record",
-      "projectPath": "C:\\Users\\kukur\\OneDrive\\문서\\GitHub\\Record\\Record\\Record\\Record.csproj",
+      "projectPath": "C:\\Users\\kukur\\OneDrive\\문서\\GitHub\\Record\\Record\\Record.csproj",
       "packagesPath": "C:\\Users\\kukur\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\kukur\\OneDrive\\문서\\GitHub\\Record\\Record\\Record\\obj\\",
+      "outputPath": "C:\\Users\\kukur\\OneDrive\\문서\\GitHub\\Record\\Record\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

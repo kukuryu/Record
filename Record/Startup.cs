@@ -8,6 +8,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Record.Infrastucture;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Logging;
 
 namespace Record
 {
@@ -30,9 +31,16 @@ namespace Record
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env)
+        public void Configure(IApplicationBuilder app, IHostingEnvironment env
+			, ILoggerFactory loggerFactory)
         {
-            if (env.IsDevelopment())
+			//logger Factory Pattern
+			loggerFactory.AddConsole(Configuration.GetSection("Logging")); //log levels set in your configuration
+			loggerFactory.AddDebug(); //does all log levels
+									  //removed rest of code
+			//logger Factory Pattern
+
+			if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
                 app.UseBrowserLink();

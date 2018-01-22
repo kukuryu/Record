@@ -120,7 +120,11 @@
             $.get("API/GetRecord/" + userId)
                 .done(function (data) {
                     console.log(data);
-                $(".result").html("Title : "+ data.title + "\n Content : " + data.content);
+                    if (data == undefined) {
+                        $(".result").html("");
+                    } else {
+                        $(".result").html("Title : " + data.title + "\n Content : " + data.content);
+                    }
             })
             .fail(function () {
                 $(".result").html("오류");
