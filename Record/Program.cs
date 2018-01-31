@@ -20,7 +20,7 @@ namespace Record
 			.UseKestrel()
 			.UseContentRoot(Directory.GetCurrentDirectory())
 			.UseIISIntegration()
-			//.UseStartup<IWebHost>()
+			.UseStartup<IWebHost>()
 			.Build();
 
 			host.Run();

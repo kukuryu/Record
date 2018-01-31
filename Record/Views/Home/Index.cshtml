@@ -107,7 +107,7 @@
 
 유저명
 <div>
-    <input type="text" class="input-sm" id="userId" onkeyup="javascript: GetUserList();" /> <input type="button" value="검색" class="btn btn-sm" onclick="javascript: alert('검색');"/>
+    <input type="text" class="input-sm" id="userId" @*onkeyup="javascript: GetUserList();"*@ /> <input type="button" value="검색" class="btn btn-sm" onclick="javascript: GetUserList();"/>
 </div>
 
 <div class="result">
@@ -123,7 +123,7 @@
                     if (data == undefined) {
                         $(".result").html("");
                     } else {
-                        $(".result").html("Title : " + data.title + "\n Content : " + data.content);
+                        $(".result").html("Name : " + data.name + "\n Profile : " + data.revisionDateTime);
                     }
             })
             .fail(function () {

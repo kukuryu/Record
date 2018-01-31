@@ -12,10 +12,4 @@
     <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="2.0.1" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Reference Include="PUBGSharp">
-      <HintPath>bin\Debug\netcoreapp2.0\PUBGSharp.dll</HintPath>
-    </Reference>
-  </ItemGroup>
-
 </Project>
