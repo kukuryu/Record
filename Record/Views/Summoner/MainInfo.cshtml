@@ -1,0 +1,38 @@
+﻿@model Record.Models.Summoner
+
+@{
+     ViewData["Title"] = "League Of Legends Info Search";
+}
+<div class="jumbotron">
+    <p>
+        @if (Model != null)
+        {
+            <h1>@Model.Name</h1>
+            <button class="btn btn-primary btn-lg">유저 동기화</button>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        }
+        else
+        {
+            <h1>이런! 정보가 없군요</h1>
+            @*<button class="btn btn-primary btn-lg">유저 정보 신청</button>*@
+        }
+    </p>
+</div>
+
+
+

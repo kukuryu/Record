@@ -11,8 +11,10 @@ using Microsoft.AspNetCore;
 using Record.Models;
 using Microsoft.EntityFrameworkCore;
 using Record.Infrastucture.Requester;
-using Record.ViewModels;
 using Record.Infrastucture.Enums;
+using Record.Infrastucture.Helpers;
+using System.Net.Http;
+using Newtonsoft.Json;
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
 namespace Record.ApiController
@@ -29,24 +31,59 @@ namespace Record.ApiController
 			_context = context;
 		}
 
-		[HttpGet("{userId}")]
-        public UserStatViewModel GetUserStat(string userId, Region region = Region.KR)
-        {
-			var userStat = new UserStatViewModel();
-			try
-			{
-				//호출할곳
-				userStat = UserStatHelper.GetUserStat_Async(_context,userId, (Region)region).GetAwaiter().GetResult();
-				//var value = req.RequestUserStat_Async(userId, 0).GetAwaiter().GetResult();
+		//[HttpGet("{userId}")]
+  //      public Summoner GetUserStat(string userId, Region region = Region.KR)
+  //      {
+		//	var userStat = new Summoner();
+		//	try
+		//	{
+		//		//호출할곳
+		//		userStat = SummonerHelper.GetSummonerInfo_Async(_context, userId, (Region)region).GetAwaiter().GetResult();
+		//	}
+		//	catch (Exception ex)
+		//	{
+		//		var logger = _Factory.CreateLogger("GetUserStat");
+		//		logger.LogError(ex.Message);
+		//	}
 
-				//recordList.Content = value;
-			}
-			catch (Exception ex)
-			{
-				var logger = _Factory.CreateLogger("Program");
-			}
+		//	return userStat;
+		//}
 
-			return userStat;
-		}
+		//[HttpGet("{userId}")]
+		//public async Task<Summoner> GetSummonerInfo_Async(string userId, Region region = Region.KR)
+		//{
+		//	try
+		//	{
+		//		var _client = new HttpClient();
+		//		var code = _context.Codes.FirstOrDefault(p => p.IsActive == true && p.CodeName == "APIKey");
+		//		var apiItem = _context.APIKeys.FirstOrDefault(p => p.IsActive == true);
+		//		var apiKey = "";
+		//		if (apiItem != null)
+		//		{
+		//			apiKey = apiItem.KeyValue;
+		//		}
+
+		//		string request = $"https://{region.ToString().ToLower()}.api.riotgames.com/lol/summoner/v3/summoners/by-name/{userId}?api_key={apiKey}";
+
+		//		using (var response = await _client.GetAsync(request).ConfigureAwait(true))
+		//		{
+		//			var responseData = await response.Content.ReadAsStringAsync().ConfigureAwait(true);
+		//			var summoner = JsonConvert.DeserializeObject<Summoner>(responseData);
+		//			if (string.IsNullOrEmpty(summoner.Name))
+		//			{
+		//				return null;
+		//			}
+		//			else
+		//			{
+		//				_context.Summoners.Add(summoner);
+		//				return summoner;
+		//			}
+		//		}
+		//	}
+		//	catch (JsonException ex)
+		//	{
+		//		throw new Exception($"Failed to deserialize data: {ex.Message}", ex);
+		//	}
+		//}
 	}
 }

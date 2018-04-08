@@ -14,13 +14,17 @@ namespace Record.Infrastucture
 		{
 		}
 
-		public DbSet<UserRecord> UserRecords { get; set; }
+		//public DbSet<Summoner> Summoners { get; set; }
+		public DbSet<SummonersId> SummonersIds { get; set; }
 		public DbSet<APIKey> APIKeys { get; set; }
+		public DbSet<Code> Codes { get; set; }
 
 		protected override void OnModelCreating(ModelBuilder modelBuilder)
 		{
-			modelBuilder.Entity<UserRecord>().ToTable("RECORD_UserRecord");
+			//modelBuilder.Entity<Summoner>().ToTable("RECORD_Summoner");
+			modelBuilder.Entity<SummonersId>().ToTable("RECORD_SummonersId");
 			modelBuilder.Entity<APIKey>().ToTable("SYS_APIKey");
+			modelBuilder.Entity<Code>().ToTable("SYS_Code");
 			
 		}
 	}

@@ -30,7 +30,10 @@ namespace Record.Infrastucture.Requester
 				{
 					apiKey = apiItem.KeyValue;
 				}
-				string request = $"https://{region.ToString().ToLower()}.api.riotgames.com/lol/summoner/v3/summoners/by-name/{playerName}?api_key={apiKey}";
+				var codes = _context.Codes.FirstOrDefault(p => p.IsActive == true && p.CodeName == "MainDomain");
+
+
+				string request = $"https://{region.ToString().ToLower()}."+ codes.CodeValue+ "/lol/summoner/v3/summoners/by-name/{playerName}?api_key={apiKey}";
 				
 				using (var response = await _client.GetAsync(request).ConfigureAwait(true))
 				{
